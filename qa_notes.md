@@ -50,8 +50,7 @@ rule sets and consuming projects with various owners. When we've landed that, th
 
 More info at [bazelbuild/bazel#6431](https://github.com/bazelbuild/bazel/issues/6431#issuecomment-978329014).
 
-#### Q: (C++) Will Starlarkification port include scanning / .d pruning? If not, how will you solve this problem? impl_deps would require all external
-repositories to support impl_deps and explicit cc_library declarations.
+#### Q: (C++) Will Starlarkification port include scanning / .d pruning? If not, how will you solve this problem? impl_deps would require all external repositories to support impl_deps and explicit cc_library declarations.
 A ([@lberki](https://github.com/lberki)): We reluctantly support include scanning: it's design-awkward but has practical benefits. We are offering support
 through an –experimental flag. We're trying to avoid Starlark support since we don't want to embed language-specific logic into Starlark.
 
@@ -67,8 +66,7 @@ android_instrumentation_test, roboelectrict_test will remain native for a while.
 A ([@katre](https://github.com/katre)): C++ should fully work (if you flip an incompatible flag). We haven't flipped the flag yet because depending Android /
 iOS projects break until they support toolchains. This is why we're focusing on migrating Android / IOS now.
 
-#### Q: (platforms / toolchains) How do we maintain toolchains for non-standard platforms? If I write my own toolchain will I have to update it often due to API
-changes across Bazel releases? How stable are the core APIs?
+#### Q: (platforms / toolchains) How do we maintain toolchains for non-standard platforms? If I write my own toolchain will I have to update it often due to API changes across Bazel releases? How stable are the core APIs?
 A ([@katre](https://github.com/katre)): You should write your own toolchains for custom platforms. We intend to make the API reliably stable, and communicate
 breaking changes carefully. Core Bazel isn't trying to explicitly support non-standard toolchains: that's the responsibility of whoever needs them.
 
