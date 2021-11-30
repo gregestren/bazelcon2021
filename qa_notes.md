@@ -48,7 +48,7 @@ restrict it to truly ubiquitous platforms.
 For the broader platforms API, we're actively working now to standardize —platforms across Bazel. A lot of this work is invisible since it requires migrating
 rule sets and consuming projects with various owners. When we've landed that, that'll be a good time to consider API expansions like platform extensions.
 
-More info at [bazelbuild/bazel#6432](https://github.com/bazelbuild/bazel/issues/6431#issuecomment-978329014).
+More info at [bazelbuild/bazel#6431](https://github.com/bazelbuild/bazel/issues/6431#issuecomment-978329014).
 
 #### Q: (C++) Will Starlarkification port include scanning / .d pruning? If not, how will you solve this problem? impl_deps would require all external
 repositories to support impl_deps and explicit cc_library declarations.
